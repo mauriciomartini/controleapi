@@ -66,5 +66,13 @@ public class PessoaController {
         
         
     }
+    
+    @PutMapping("/{codigo}/ativo")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void atutalizarPropriedadeAtivo(@PathVariable Long codigo, @RequestBody Boolean ativo) {
+        pessoaService.atulizarPropriedadeAtivo(codigo, ativo);
+    }
+    
+    
 
 }
