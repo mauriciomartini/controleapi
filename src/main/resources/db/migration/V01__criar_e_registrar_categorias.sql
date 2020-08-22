@@ -1,8 +1,10 @@
-CREATE TABLE categoria(
-    codigo SERIAL,
+CREATE TABLE categoria (
+    codigo SERIAL PRIMARY KEY,
     nome VARCHAR(50) NOT NULL
 );
 
-INSERT INTO categoria (nome) values ('Imposto');
-INSERT INTO categoria (nome) values ('Casa');
-INSERT INTO categoria (nome) values ('Mercado');
+INSERT INTO categoria (nome) values ('Lazer');
+INSERT INTO categoria (nome) values ('Alimentação');
+INSERT INTO categoria (nome) values ('Supermercado');
+INSERT INTO categoria (nome) values ('Farmácia');
+INSERT INTO categoria (nome) values ('Outros');
