@@ -51,13 +51,7 @@ public class PessoaController {
         Optional<Pessoa> pessoaPorCodigo = pessoaRepository.findById(codigo);
         return pessoaPorCodigo != null ? ResponseEntity.ok(pessoaPorCodigo) : ResponseEntity.notFound().build();
     }
-    
-    @DeleteMapping("/{codigo}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void  remover(@PathVariable Long codigo) {
-        pessoaRepository.deleteById(codigo);
-        
-    }
+  
     
     @PutMapping("/{codigo}")
     public ResponseEntity<Pessoa> atualizar(@PathVariable Long codigo, @Valid @RequestBody Pessoa pessoa) {
@@ -76,7 +70,7 @@ public class PessoaController {
     @DeleteMapping("/{codigo}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deletarPessoa(@PathVariable Long codigo) {
-        pessoaRepository.deleteBycodigo(codigo);
+        pessoaRepository.deleteById(codigo);
         
     }
     
