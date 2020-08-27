@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.controleapi.event.RecursoCriadoEvent;
 import br.com.controleapi.model.Lancamento;
-import br.com.controleapi.model.Pessoa;
 import br.com.controleapi.repository.LancamentoRepository;
 import br.com.controleapi.service.LancamentoService;
 
