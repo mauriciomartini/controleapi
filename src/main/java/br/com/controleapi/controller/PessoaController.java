@@ -73,6 +73,13 @@ public class PessoaController {
         pessoaService.atulizarPropriedadeAtivo(codigo, ativo);
     }
     
+    @DeleteMapping("/{codigo}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deletarPessoa(@PathVariable Long codigo) {
+        pessoaRepository.deleteBycodigo(codigo);
+        
+    }
+    
     
 
 }

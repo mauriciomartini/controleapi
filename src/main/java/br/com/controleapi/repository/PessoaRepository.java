@@ -9,5 +9,6 @@ import br.com.controleapi.model.Pessoa;
 
 public interface PessoaRepository extends JpaRepository<Pessoa, Long> {
     public Pessoa findBycodigo(Long codigo);
+    public Pessoa deleteBycodigo(Long codigo);
 
 }
