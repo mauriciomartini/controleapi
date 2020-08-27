@@ -11,6 +11,10 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.springframework.data.annotation.Transient;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "pessoa")
 public class Pessoa implements Serializable {
@@ -59,6 +63,11 @@ public class Pessoa implements Serializable {
 
     public boolean isAtivo() {
         return ativo;
+    }
+    @JsonIgnore
+    @Transient
+    public boolean isInativo() {
+        return !this.ativo;
     }
 
     public void setAtivo(boolean ativo) {
